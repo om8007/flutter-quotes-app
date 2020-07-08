@@ -7,10 +7,10 @@ A new Flutter Quotes App project.
 - Uses pageview to show swipeable quotes
 
 ### Screenshots
-<center>
+<p align="center">
 <img src="./screenshots/screenshot (1).png" alt="Quote 1" width="250" title="Quote 1">
 <img src="./screenshots/screenshot (2).png" alt="Quote 2" width="250" title="Quote 2">
-</center>
+</p>
 
 ### New to flutter ? Start here...
 
