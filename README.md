@@ -1,10 +1,12 @@
 # quotes_app
 
-A new Flutter project.
+A new Flutter Quotes App project.
 
-## Getting Started
+## Outline
+- Uses Firebase (Firestore as backend to fetch quotes from)
+- Uses pageview to show swipeable quotes
 
-This project is a starting point for a Flutter application.
+#### New to flutter ?
 
 A few resources to get you started if this is your first Flutter project:
 
