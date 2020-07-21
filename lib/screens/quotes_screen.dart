@@ -50,9 +50,10 @@ class _QuotesScreenState extends State<QuotesScreen> {
     String path = directory.path;
     print(path);
     await Directory('$path/$directoryName').create(recursive: true);
-    File('$path/$directoryName/${fileName()}.png')
-        .writeAsBytesSync(pngBytes);
-    print('Image Saved....');
+    File('$path/$directoryName/${fileName()}.png').writeAsBytesSync(pngBytes);
+    Scaffold.of(context).showSnackBar(SnackBar(
+        content: Text('Quote saved $path/$directoryName/${fileName()}.png'),
+        ));
   }
 
   Future<void> _shareQuote() async {
