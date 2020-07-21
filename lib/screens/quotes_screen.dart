@@ -52,8 +52,8 @@ class _QuotesScreenState extends State<QuotesScreen> {
     await Directory('$path/$directoryName').create(recursive: true);
     File('$path/$directoryName/${fileName()}.png').writeAsBytesSync(pngBytes);
     Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('Quote saved $path/$directoryName/${fileName()}.png'),
-        ));
+      content: Text('Quote saved $path/$directoryName/${fileName()}.png'),
+    ));
   }
 
   Future<void> _shareQuote() async {
@@ -127,7 +127,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                     radius: 25.0,
                     backgroundColor: Colors.white24,
                     child: IconButton(
-                      color: Colors.redAccent,
+                      color: Colors.black54,
                       icon: Icon(
                         Icons.share,
                       ),
@@ -141,7 +141,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
                     radius: 25.0,
                     backgroundColor: Colors.white24,
                     child: IconButton(
-                      color: Colors.redAccent,
+                      color: Colors.black54,
                       icon: Icon(
                         Icons.save,
                       ),
