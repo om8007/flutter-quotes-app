@@ -31,6 +31,10 @@ dependencies:
   google_fonts: ^1.1.0
   random_color: ^1.0.5
   cloud_firestore: ^0.13.5
+  simple_permissions: ^0.1.6
+  path_provider: ^1.6.11
+  intl: ^0.16.1
+  wc_flutter_share: ^0.2.2
   
 dev_dependencies:
   flutter_test:
