@@ -101,19 +101,19 @@ class _QuotesScreenState extends State<QuotesScreen> {
               stream: _firestore.collection('quotes').snapshots(),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) return _LoadingIndicator();
-                return PageView.builder(
-                    itemCount: snapshot.data.documents.length,
-                    itemBuilder: (context, index) {
-                      final document = snapshot.data.documents[index];
-                      return RepaintBoundary(
-                        key: QuotesScreen.globalKey,
-                        child: QuoteWidget(
+                return RepaintBoundary(
+                  key: QuotesScreen.globalKey,
+                  child: PageView.builder(
+                      itemCount: snapshot.data.documents.length,
+                      itemBuilder: (context, index) {
+                        final document = snapshot.data.documents[index];
+                        return QuoteWidget(
                             backgroundColor: _randomColor.randomColor(
                                 colorBrightness: ColorBrightness.dark),
                             quote: document['quote'],
-                            author: document['author']),
-                      );
-                    });
+                            author: document['author']);
+                      }),
+                );
               }),
           Align(
             alignment: Alignment.bottomRight,
